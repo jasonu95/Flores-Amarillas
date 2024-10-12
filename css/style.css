@@ -20,6 +20,49 @@ body {
   perspective: 1000px;
 }
 
+/* Pantalla negra de introducción */
+.intro-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.intro-screen button {
+  padding: 10px 20px;
+  font-size: 24px;
+  color: white;
+  background-color: #333;
+  border: none;
+  cursor: pointer;
+}
+
+.play-button {
+  width: 100px; /* Ajusta el tamaño según sea necesario */
+  height: auto;
+  cursor: pointer;
+}
+
+/* Transición de desvanecimiento */
+.fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+  100% {
+      opacity: 0;
+      visibility: hidden;
+  }
+}
+
+
+/* Efectos principales */
 .night {
   position: fixed;
   left: 50%;
@@ -52,7 +95,8 @@ body {
 
 .message {
   background: #fce700;
-  bottom: 50px;
+  border-radius: 30px;
+  bottom: 450px;
   font-family: "Shadows Into Light", sans-serif;
   font-size: 40px;
   font-style: normal;
@@ -63,7 +107,7 @@ body {
   position: absolute;
   opacity: 0; /* El elemento empieza invisible */
   animation: fadeIn 1s forwards;
-  animation-delay: 2s; /* El elemento aparecerá después de 60 segundos */
+  animation-delay: 2s; /* El elemento aparecerá después de 2 segundos */
 }
 
 @keyframes fadeIn {
